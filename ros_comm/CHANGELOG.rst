@@ -2,6 +2,11 @@
 Changelog for package ros_comm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* Remove run-depend on Lisp for ARM.
+* Contributors: trainman419
+
 1.9.50 (2013-10-04)
 -------------------
 

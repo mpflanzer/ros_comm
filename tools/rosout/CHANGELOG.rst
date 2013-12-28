@@ -2,6 +2,13 @@
 Changelog for package rosout
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* add error messages to rosout
+* feedback on log4cxx refactoring
+* remove log4cxx dependency from rosout, implementing custom rolling log file
+* Contributors: Dirk Thomas
+
 1.9.50 (2013-10-04)
 -------------------
 

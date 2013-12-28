@@ -2,6 +2,11 @@
 Changelog for package xmlrpcpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* fix compilation with clang (fix `#291 <https://github.com/trainman419/ros_comm/issues/291>`_)
+* Contributors: Dirk Thomas
+
 1.9.50 (2013-10-04)
 -------------------
 

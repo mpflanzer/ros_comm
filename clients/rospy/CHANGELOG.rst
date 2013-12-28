@@ -2,6 +2,13 @@
 Changelog for package rospy
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* overwrite __repr__ for rospy.Duration and Time (fix `ros/genpy#24 <https://github.com/ros/genpy/issues/24>`_)
+* implement optional queueing for rospy publications (`#169 <https://github.com/trainman419/ros_comm/issues/169>`_)
+* add roscpp dependency
+* Contributors: Dirk Thomas, Vincent Rabaud
+
 1.9.50 (2013-10-04)
 -------------------
 * add support for python coverage tool to work in callbacks

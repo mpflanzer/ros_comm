@@ -2,6 +2,16 @@
 Changelog for package rosconsole
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* change interface to rosconsole backend from list-of-pairs to map
+* feedback on log4cxx refactoring
+* add simple glog backend for rosconsole
+* update empty rosconsole backend to print to console as well as support rosout appender
+* refactor rosconsole to not expose log4cxx, implement empty and log4cxx backends
+* rosconsole: update script to generate code
+* Contributors: Dirk Thomas
+
 1.9.50 (2013-10-04)
 -------------------
 

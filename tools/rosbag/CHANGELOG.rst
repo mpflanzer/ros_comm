@@ -2,6 +2,15 @@
 Changelog for package rosbag
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* fix usage of boost include directories
+* Fix return value on platforms where char is unsigned.
+* Update link from code.ros.org to wiki.ros.org
+* update code after refactoring into rosbag_storage and roscpp_core (`#299 <https://github.com/trainman419/ros_comm/issues/299>`_)
+* move several client library independent parts from ros_comm into roscpp_core, split rosbag storage specific stuff from client library usage (`#299 <https://github.com/trainman419/ros_comm/issues/299>`_)
+* Contributors: Dirk Thomas, Michael Ferguson, trainman419
+
 1.9.50 (2013-10-04)
 -------------------
 * add chunksize option to rosbag record

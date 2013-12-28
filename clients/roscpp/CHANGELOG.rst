@@ -2,6 +2,17 @@
 Changelog for package roscpp
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* fix usage of boost include directories
+* add missing version dependency on roscpp_core stuff (`#299 <https://github.com/trainman419/ros_comm/issues/299>`_)
+* fix compile problem with gcc 4.4 (fix `#302 <https://github.com/trainman419/ros_comm/issues/302>`_)
+* change interface to rosconsole backend from list-of-pairs to map
+* remove log4cxx dependency from roscpp, using new agnostic interface from rosconsole
+* update code after refactoring into rosbag_storage and roscpp_core (`#299 <https://github.com/trainman419/ros_comm/issues/299>`_)
+* move several client library independent parts from ros_comm into roscpp_core, split rosbag storage specific stuff from client library usage (`#299 <https://github.com/trainman419/ros_comm/issues/299>`_)
+* Contributors: Dirk Thomas
+
 1.9.50 (2013-10-04)
 -------------------
 

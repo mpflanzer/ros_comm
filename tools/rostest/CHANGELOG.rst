@@ -2,6 +2,11 @@
 Changelog for package rostest
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* add missing boost component
+* Contributors: Dirk Thomas
+
 1.9.50 (2013-10-04)
 -------------------
 * fix result file naming for wet rostests when being built in-source (`ros/catkin#512 <https://github.com/ros/catkin/issues/512>`_)

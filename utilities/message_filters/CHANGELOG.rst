@@ -2,6 +2,15 @@
 Changelog for package message_filters
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
+1.9.51 (2013-12-28)
+-------------------
+* Fix changelog formatting.
+* Fix segmentation fault on OS X 10.9 (clang / libc++)
+  Accessing front() of an empty std::deque is undefined behavior.
+  With gcc/libstdc++ it seems fine, on clang / libc++ it causes a segmentation fault.
+* update code after refactoring into rosbag_storage and roscpp_core (`#299 <https://github.com/trainman419/ros_comm/issues/299>`_)
+* Contributors: Dirk Thomas, Nikolaus Demmel, trainman419
+
 1.9.50 (2013-10-04)
 -------------------
 
