@@ -15,6 +15,8 @@
 
 using namespace XmlRpc;
 
+const int XmlRpcServer::FREE_FD_BUFFER = 32;
+const double XmlRpcServer::ACCEPT_RETRY_INTERVAL_SEC = 1.0;
 
 XmlRpcServer::XmlRpcServer()
   : _introspectionEnabled(false),
