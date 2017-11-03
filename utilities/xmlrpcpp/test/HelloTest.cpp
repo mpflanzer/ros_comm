@@ -46,6 +46,7 @@ public:
   Hello(XmlRpcServer* s) : XmlRpcServerMethod("Hello", s) {}
 
   void execute(XmlRpcValue& params, XmlRpcValue& result) {
+    (void)params;
     result = "Hello";
   }
 

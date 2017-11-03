@@ -28,6 +28,7 @@
 using namespace XmlRpc;
 
 void Hello::execute(XmlRpcValue& params, XmlRpcValue& result) {
+  (void)params;
   boost::unique_lock<boost::mutex> lock(hello_mutex);
   result = "Hello";
 }

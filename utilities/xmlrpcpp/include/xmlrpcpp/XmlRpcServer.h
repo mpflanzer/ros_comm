@@ -117,12 +117,12 @@ namespace XmlRpc {
     bool _accept_error;
     // If we cannot accept(), retry after this many seconds. Hopefully there
     // will be more free file descriptors later.
-    const double ACCEPT_RETRY_INTERVAL_SEC = 1.0;
+    static const double ACCEPT_RETRY_INTERVAL_SEC = 1.0;
     // Retry time for accept.
     double _accept_retry_time_sec;
 
     // Minimum number of free file descriptors before rejecting clients.
-    const int FREE_FD_BUFFER = 32;
+    static const int FREE_FD_BUFFER = 32;
     // List of all file descriptors, used for counting open files.
     std::vector<struct pollfd> pollfds;
   };
