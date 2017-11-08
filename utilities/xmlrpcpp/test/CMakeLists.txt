@@ -45,22 +45,24 @@ set_target_properties(test_dispatch PROPERTIES
 catkin_add_gtest(test_dispatch_live test_dispatch_live.cpp)
 target_link_libraries(test_dispatch_live xmlrpcpp test_fixtures ${Boost_LIBRARIES})
 
-catkin_add_gtest(test_socket
-  test_socket.cpp
-  test_system_mocks.c
-  ../src/XmlRpcSocket.cpp
-  ../src/XmlRpcUtil.cpp
-)
-set_target_properties(test_socket PROPERTIES
-  LINK_FLAGS
-  "-Wl,--wrap=accept -Wl,--wrap=bind -Wl,--wrap=close -Wl,--wrap=connect -Wl,--wrap=getaddrinfo -Wl,--wrap=getsockname -Wl,--wrap=listen -Wl,--wrap=read -Wl,--wrap=setsockopt -Wl,--wrap=select -Wl,--wrap=socket -Wl,--wrap=write -Wl,--wrap=fcntl -Wl,--wrap=freeaddrinfo"
-)
-
 add_library(test_fixtures test_fixtures.cpp)
 target_link_libraries(test_fixtures ${Boost_LIBRARIES})
 
 catkin_add_gtest(test_ulimit test_ulimit.cpp)
 target_link_libraries(test_ulimit xmlrpcpp test_fixtures ${Boost_LIBRARIES})
+
+if(NOT WIN32)
+  catkin_add_gtest(test_socket
+    test_socket.cpp
+    test_system_mocks.c
+    ../src/XmlRpcSocket.cpp
+    ../src/XmlRpcUtil.cpp
+  )
+  set_target_properties(test_socket PROPERTIES
+    LINK_FLAGS
+    "-Wl,--wrap=accept -Wl,--wrap=bind -Wl,--wrap=close -Wl,--wrap=connect -Wl,--wrap=getaddrinfo -Wl,--wrap=getsockname -Wl,--wrap=listen -Wl,--wrap=read -Wl,--wrap=setsockopt -Wl,--wrap=select -Wl,--wrap=socket -Wl,--wrap=write -Wl,--wrap=fcntl -Wl,--wrap=freeaddrinfo"
+  )
+endif()
 
 catkin_add_gtest(TestValues TestValues.cpp)
 target_link_libraries(TestValues xmlrpcpp)
